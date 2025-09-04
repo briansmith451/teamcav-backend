@@ -22,11 +22,11 @@ import { ConfigModule } from '@nestjs/config';
     ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      username: 'postgres',
-      password: 'P51Mustang!!', // Make sure this is your correct password
-      database: 'teamcav_dev',
+      // This configuration is for Render deployment
+      url: process.env.DATABASE_URL,
+      ssl: {
+        rejectUnauthorized: false,
+      },
       entities: [
         User,
         Team,
