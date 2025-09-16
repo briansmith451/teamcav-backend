@@ -45,7 +45,7 @@ const getTypeOrmConfig = (): TypeOrmModuleOptions => {
       host: 'localhost',
       port: 5432,
       username: 'postgres',
-      password: 'YOUR_PASSWORD_HERE', // <-- Make sure this is your correct local password
+      password: 'P51Mustang!!', // <-- Make sure this is your correct local password
       database: 'teamcav_dev',
       entities: [
         User,
